@@ -1,4 +1,6 @@
 # nodeBT
+
+[![Join the chat at https://gitter.im/supertassu/nodeBT](https://badges.gitter.im/supertassu/nodeBT.svg)](https://gitter.im/supertassu/nodeBT?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Bug tracker in node.js
 <br/>
 [![Dependency Status](https://david-dm.org/supertassu/nodeBT.svg)](https://david-dm.org/supertassu/nodeBT)
