@@ -1,18 +1,26 @@
 var http = require("http");
+var debug = require('debug')('debug');
 
-var server = http.createServer(function (request, response) {
+function onRequest (request, response) {
 
-   // Send the HTTP header 
-   // HTTP Status: 200 : OK
-   // Content Type: text/plain
-   response.writeHead(200, {'Content-Type': 'text/html'});
+    // DEBUG
+    debug("http request");
+
+    // Send the HTTP header 
+    // HTTP Status: 200 : OK
+    // Content Type: text/html
+    response.writeHead(200, {'Content-Type': 'text/html'});
    
-   // Send the response body as "Hello World"
-   response.end('Hello World\n');
-});
+    // Send the response body as "Hello World"
+    response.end('Hello World\n');
+}
+
+var server = http.createServer(onRequest);
 
 // Console will print the message
 console.log('This in NodeBT.');
+debug("this is debug mode");
 console.log('Starting server...');
-server.listen(8081);
-console.log('Server running at http://127.0.0.1:8081/');
+server.listen(8081, function() {
+	console.log('Server running at http://127.0.0.1:8081/');
+});
