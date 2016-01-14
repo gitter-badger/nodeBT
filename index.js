@@ -1,6 +1,6 @@
 var http = require("http");
 
-http.createServer(function (request, response) {
+var server = http.createServer(function (request, response) {
 
    // Send the HTTP header 
    // HTTP Status: 200 : OK
@@ -9,7 +9,10 @@ http.createServer(function (request, response) {
    
    // Send the response body as "Hello World"
    response.end('Hello World\n');
-}).listen(8081);
+});
 
 // Console will print the message
+console.log('This in NodeBT.');
+console.log('Starting server...');
+server.listen(8081);
 console.log('Server running at http://127.0.0.1:8081/');
