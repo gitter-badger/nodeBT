@@ -1,21 +1,8 @@
 var http = require("http");
-var debug = require('debug')('debug');
+var requestHandler = require("./js/requestHandler");
+var debug = require('debug')('core');
 
-function onRequest (request, response) {
-
-    // DEBUG
-    debug("http request");
-
-    // Send the HTTP header 
-    // HTTP Status: 200 : OK
-    // Content Type: text/html
-    response.writeHead(200, {'Content-Type': 'text/html'});
-   
-    // Send the response body as "Hello World"
-    response.end('Hello World\n');
-}
-
-var server = http.createServer(onRequest);
+var server = http.createServer(requestHandler.onRequest);
 
 // Console will print the message
 console.log('This in NodeBT.');

@@ -1,0 +1,23 @@
+{
+  "name": "NodeBT",
+  "description": "Bug Tracker in Node",
+  "main": "index.js",
+  "authors": [
+    "Supertassu"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bugs"
+  ],
+  "homepage": "https://github.com/supertassu/nodeBT",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
